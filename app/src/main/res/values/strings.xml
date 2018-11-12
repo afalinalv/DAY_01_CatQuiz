@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DAY_01_1_CatQuiz</string>
+    <string name="app_name">DAY_01_CatQuiz</string>
     <string name="correct_toast">Правильно!</string>
     <string name="incorrect_toast">Неправильно!</string>
 
@@ -8,4 +8,12 @@
     <string name="question_3">В Китае самая большая «плотность кошачьего населения»? (В Австралии. На десять жителей приходится девять кошек)</string>
     <string name="question_4">Любимого кота Виктора Гюго звали Крендель? (Гаврош)</string>
     <string name="question_5">Автором выражения: «Быстро только кошки плодятся» является Остап Бендер? (роман «Двенадцать стульев»)</string>
+
+    <string-array name="answers">
+        <item>Африка является родиной домашней кошки</item>
+        <item>Действительно, на знамени Спартака была кошка</item>
+        <item>В Австралии. На десять жителей приходится девять кошек</item>
+        <item>Любимого кота звали Гаврош</item>
+        <item>Остап произносит эту фразу в романе «Двенадцать стульев»</item>
+    </string-array>
 </resources>

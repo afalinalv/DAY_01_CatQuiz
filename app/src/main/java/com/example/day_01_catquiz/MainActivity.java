@@ -1,5 +1,6 @@
 package com.example.day_01_catquiz;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     private Button mFalseButton;
     private Button mNextButton;
     private TextView mQuestionTextView;
+    private Button mAnswerButton;
+
 
     private Question[] mQuestions = new Question[] {
             new Question(R.string.question_1, false),
@@ -72,6 +75,20 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 mCurrentIndex = (mCurrentIndex + 1) % mQuestions.length;
                 getNextQuestion();
+            }
+        });
+
+        mAnswerButton = (Button) findViewById(R.id.buttonPeep);
+        mAnswerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Запускаем активность с ответом
+                //  Intent intent = new Intent(MainActivity.this, AnswersActivity.class);
+
+                boolean answerIsTrue = mQuestions[mCurrentIndex].isRightAnswer();
+                Intent intent = AnswersActivity.sendIntent(MainActivity.this,
+                        answerIsTrue, mCurrentIndex);
+                startActivity(intent);
             }
         });
     }

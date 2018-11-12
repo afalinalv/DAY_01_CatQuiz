@@ -37,6 +37,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="False"/>
+            <Button
+                android:id="@+id/buttonPeep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Подсмотреть"/>
 
         </LinearLayout>
 
